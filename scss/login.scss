@@ -1,0 +1,133 @@
+$primary_color : #15172b;
+$secondary_color : #C09F80;
+$tertiary_color : #76323F;
+$alt_color : #565656;
+$primary_font : Arial, Helvetica, sans-serif;
+body {
+    align-items: center;
+    background-color: #D7CEC7;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .form {
+    background-color: $secondary_color;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 500px;
+    padding: 20px;
+    width: 600px;
+  }
+  
+  .title {
+    color: $primary_color;
+    text-align: center;
+    font-family: $primary_font;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  
+  .subtitle {
+    color: $primary_color;
+    text-align: center;
+    font-family: $primary_font;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .ic1 {
+    margin-top: 40px;
+  }
+  
+  .ic2 {
+    margin-top: 30px;
+  }
+  
+  .input {
+    background-color: $primary_color;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+  }
+  
+  .cut {
+    background-color: $secondary_color;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 76px;
+  }
+  
+  .cut-short {
+    width: 50px;
+  }
+  
+  .input:focus ~ .cut,
+  .input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(8px);
+  }
+  
+  .placeholder {
+    color: $alt_color;
+    font-family: $primary_font;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+  }
+  
+  .input:focus ~ .placeholder,
+  .input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+  
+  .input:not(:placeholder-shown) ~ .placeholder {
+    color: $primary_color;
+  }
+  
+  .input:focus ~ .placeholder {
+    color: $primary_color;
+  }
+  
+  .button {
+    background-color: $alt_color;
+    font-family: $primary_font;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: $primary_color;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    // outline: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .submit:active {
+    background-color: #06b;
+  }
+  
