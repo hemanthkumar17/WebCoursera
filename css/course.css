@@ -1,0 +1,81 @@
+.course-page {
+  display: inline-block;
+}
+
+/* Helper class for text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+/* Global styling */
+body {
+  font-family: sans-serif;
+  background-color: #dddddd;
+}
+
+/* Style .js- class with pointer cursor */
+.js-nested-link {
+  cursor: pointer;
+}
+
+/* Card styling */
+.card {
+  background-color: white;
+  border: 1px solid #aaaaaa;
+  border-radius: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 20px;
+  max-width: 300px;
+}
+
+.card__block {
+  margin: 20px 20px 0;
+}
+
+.card__image {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  width: 100%;
+  height: auto;
+}
+
+.card__link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #0288d1;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.card__link:hover {
+  background-color: #01579b;
+}
+
+.link-courses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+/*# sourceMappingURL=course.css.map */

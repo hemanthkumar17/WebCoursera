@@ -1,0 +1,67 @@
+.course-page {
+  display: inline-block;
+}
+/* Helper class for text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+/* Global styling */
+body {
+  font-family: sans-serif;
+  background-color: #dddddd;
+}
+
+/* Style .js- class with pointer cursor */
+.js-nested-link {
+  cursor: pointer;
+}
+
+/* Card styling */
+.card {
+  background-color: white;
+  border: 1px solid #aaaaaa;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  max-width: 300px;
+}
+
+.card__block {
+  margin: 20px 20px 0;
+}
+
+.card__image {
+  order: -1;
+  width: 100%;
+  height: auto;
+}
+
+.card__link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #0288d1;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.card__link:hover {
+  background-color: #01579b;
+}
+.link-courses {
+  display: flex;
+  padding: 10px;
+}
