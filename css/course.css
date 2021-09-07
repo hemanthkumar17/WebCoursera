@@ -41,6 +41,7 @@ body {
   flex-direction: column;
   padding-bottom: 20px;
   max-width: 280px;
+  margin: 25px;
 }
 
 .card__block {
@@ -116,4 +117,5 @@ input#search-bar:focus {
   transition: 0.35s ease;
   color: #008abf;
 }
+
 /*# sourceMappingURL=course.css.map */
