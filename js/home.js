@@ -1,4 +1,4 @@
-const courses = ['AJAX', 'JAVA', 'JAVASCRIPT', 'HTML', 'CSS']
+const courses = ['AJAX', 'JAVA', 'JAVASCRIPT', 'HTML', 'CSS', 'PYTHON']
 
 function create_card(course){
     let div = document.createElement('div')
@@ -8,7 +8,7 @@ function create_card(course){
     // element.innerText = course
     // div.appendChild(element)
     div.style.background =  "url(src/logos/"+course+".png)";
-    div.style.backgroundSize = '200px'
+    div.style.backgroundSize = '150px'
     div.id = course.toLowerCase()
     div.addEventListener('click', (event) => {
         window.location.href = `/${event.target.id}.html`;
