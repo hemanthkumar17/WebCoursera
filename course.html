@@ -14,16 +14,21 @@
   <body>
     <center>
       <div class="course-page">
-        <h1>some search bar here</h1>
         <h2>HTML</h2>
-
+        <div class="search-container">
+          <input
+            type="text"
+            name="search-bar"
+            id="search-bar"
+            placeholder="Search here"
+          />
+        </div>
         <div class="link-courses">
           <div class="card js-nested-link">
             <h2 class="card__block">MDN Docs</h2>
             <img
               class="card__image"
               src="https://www.bestwebsitebuilders.uk/wp-content/uploads/2018/06/html-1080x500.png"
-              alt="A kitten."
             />
             <p class="card__block">
               Morzilla Wev Docs are standard documentation for all web related
@@ -42,7 +47,6 @@
             <img
               class="card__image"
               src="https://www.bestwebsitebuilders.uk/wp-content/uploads/2018/06/html-1080x500.png"
-              alt="A kitten."
             />
             <p class="card__block">
               W3 Schools documentation is also famous, And is also used by lot
@@ -59,7 +63,6 @@
             <img
               class="card__image"
               src="https://www.bestwebsitebuilders.uk/wp-content/uploads/2018/06/html-1080x500.png"
-              alt="A kitten."
             />
             <p class="card__block">
               HTML Dot com are standard documentation for all web related
@@ -72,24 +75,39 @@
         </div>
 
         <div>
-          <iframe
-            width="460"
-            height="300"
-            src="https://www.youtube.com/embed/qz0aGYrrlhU"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            width="460"
-            height="300"
-            src="https://www.youtube.com/embed/qz0aGYrrlhU"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+          <ul>
+            <li>
+              <iframe
+                width="300"
+                height="200"
+                src="https://www.youtube.com/embed/qz0aGYrrlhU"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div class="input-checkbox">
+                <input id="checkbox-1" type="checkbox" />
+                <label class="checkbox" for="checkbox-1">Time</label>
+              </div>
+            </li>
+            <br />
+            <li>
+              <iframe
+                width="300"
+                height="200"
+                src="https://www.youtube.com/embed/pQN-pnXPaVg"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div class="input-checkbox">
+                <input id="checkbox-1" type="checkbox" />
+                <label class="checkbox" for="checkbox-1">Time</label>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </center>
