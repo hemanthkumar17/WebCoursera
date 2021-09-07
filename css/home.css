@@ -1,5 +1,5 @@
 body {
-  padding-top: 75px;
+  padding-top: 5%;
 }
 
 .search-container {
@@ -40,7 +40,7 @@ input#search-bar:focus {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  margin-top: -35px;
+  margin-top: -2%;
 }
 
 .card {
