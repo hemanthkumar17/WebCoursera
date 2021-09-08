@@ -9,7 +9,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  height: 90vh;
 }
 
 .form {
@@ -17,9 +17,19 @@ body {
   border-radius: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 500px;
+  height: 55vh;
   padding: 20px;
-  width: 600px;
+  width: 60vh;
+}
+
+.form2 {
+  background-color: #C09F80;
+  border-radius: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 65vh;
+  padding: 20px;
+  width: 60vh;
 }
 
 .title {
@@ -52,6 +62,7 @@ body {
 
 .ic2 {
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .input {
@@ -88,8 +99,30 @@ body {
   width: 50px;
 }
 
+.cut-big {
+  background-color: #C09F80;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+  width: 115px;
+}
+
 .input:focus ~ .cut,
 .input:not(:placeholder-shown) ~ .cut {
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+}
+
+.input:focus ~ .cut-big,
+.input:not(:placeholder-shown) ~ .cut-big {
   -webkit-transform: translateY(8px);
           transform: translateY(8px);
 }
@@ -135,7 +168,7 @@ body {
   cursor: pointer;
   font-size: 18px;
   height: 50px;
-  margin-top: 38px;
+  margin-top: 20px;
   text-align: center;
   width: 100%;
 }

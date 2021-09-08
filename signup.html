@@ -12,36 +12,38 @@
     <link rel="stylesheet" href="css/login.css" />
   </head>
   <body>
-    <div class="form">
+    <div class="form2">
       <div class="title">WebCoursera</div>
-      <div class="subtitle">Login</div>
+      <div class="subtitle">Sign Up as a Member</div>
       <div class="input-container ic1">
-        <input id="emailId" class="input" type="text" placeholder=" " />
-        <div class="cut"></div>
-        <label for="emailId" class="placeholder">Email Id</label>
-      </div>
+          <input id="emailId" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="emailId" class="placeholder">Email Id</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="phoneno" class="input" type="tel" pattern="[0-9]{10}" placeholder=" " />
+            <div class="cut-big"></div>
+            <label for="phoneno" class="placeholder">Phone Number</label>
+        </div>
       <div class="input-container ic2">
         <input id="password" class="input" type="text" placeholder=" " />
         <div class="cut"></div>
         <label for="password" class="placeholder">Password</label>
       </div>
-      <button id="submit" type="text" class="button">Log In</button>
-      <button id="signup" type="text" class="button">Not a member? Sign Up!</button>
+      <div class="input-container ic2">
+        <input id="password_2" class="input" type="text" placeholder=" " />
+        <div class="cut-big"></div>
+        <label for="password" class="placeholder">Confirm Password</label>
+      </div>
+      <button id="submit" type="text" class="button">Sign Up</button>
     </div>
     <footer class="footer">
       Terms of use | Privacy Policy | Help and Support | Contact Us
     </footer>
     <script type="text/javascript">
-      document.getElementById("submit").onclick = function() {
-        password = document.getElementById("password")
-        if(password.value == "1234")
-          location.href = "courseList.html";
-        else
-          console.log("Invalid password")
+        document.getElementById("submit").onclick = function() {
+        location.href = "index.html";
       };
-      document.getElementById("signup").onclick = function() {
-        location.href = "signup.html";
-      }
     </script>
   </body>
 </html>
