@@ -14,6 +14,8 @@ document.body.addEventListener("click", function (e) {
   }
 });
 
+
+/* This will later be extracted from the database*/
 const sizes = {
   "medium" : ['https://www.youtube.com/embed/pQN-pnXPaVg'],
   "short" : ['https://www.youtube.com/embed/qz0aGYrrlhU'],
@@ -54,14 +56,3 @@ document.getElementById('duration').addEventListener("change", (event) => {
     parent.appendChild(element)
   });
 })
-
-
-let parent = document.getElementById('iframes')
-parent.innerHTML = ''
-var val = document.getElementById('duration').value
-sizes[val].forEach(link => {
-  let element = document.createElement('div')
-  element.className = 'iframe-div'
-  element.innerHTML = return_inner_html(link)
-  parent.appendChild(element)
-});

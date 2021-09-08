@@ -14,15 +14,9 @@
   <body>
     <center>
       <div class="course-page">
-        <h2>HTML</h2>
-        <div class="search-container">
-          <input
-            type="text"
-            name="search-bar"
-            id="search-bar"
-            placeholder="Search here"
-          />
-        </div>
+        <h1>AJAX</h1>
+        
+        <h2 class="reference">Reference Material</h2>
         <div class="link-courses">
           <div class="card js-nested-link">
             <h2 class="card__block">MDN Docs</h2>
@@ -73,10 +67,18 @@
             </div>
           </div>
         </div>
-
-        <div>
-          <ul>
-            <li>
+        <h2 class="vid">Videos</h2>
+        <div class="select">
+          <select name="duration" id="duration">
+            <option value="all">All</option>
+            <option value="short">Short</option>
+            <option value="medium">Medium</option>
+            <option value="long">Long</option>
+          </select>
+        </div>
+        <div class="iframes" id="iframes">
+          <div class="iframe-div">
+            <div class="iframe">
               <iframe
                 width="300"
                 height="200"
@@ -86,14 +88,14 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
-              <div class="input-checkbox">
-                <input id="checkbox-1" type="checkbox" />
-                <label class="checkbox" for="checkbox-1">Time</label>
-              </div>
-            </li>
-            <br />
-            <li>
-              <iframe
+            </div>
+            <div class="input-checkbox">
+              <label class="checkbox" for="checkbox-1"><input id="checkbox-" type="checkbox" class="check-box" /></label>
+            </div>
+          </div>
+          <div class="iframe-div">
+            <div class="iframe">
+              <iframe class="iframe"
                 width="300"
                 height="200"
                 src="https://www.youtube.com/embed/pQN-pnXPaVg"
@@ -102,13 +104,30 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
-              <div class="input-checkbox">
-                <input id="checkbox-1" type="checkbox" />
-                <label class="checkbox" for="checkbox-1">Time</label>
-              </div>
-            </li>
-          </ul>
+            </div>
+            <div class="input-checkbox">
+              <label class="checkbox" for="checkbox-2"><input id="checkbox-2" type="checkbox" class="check-box" /></label>
+            </div>
+          </div>
+
+          <div class="iframe-div">
+            <div class="iframe">
+              <iframe class="iframe"
+                width="300"
+                height="200"
+                src="https://www.youtube.com/embed/7mdEvKyLoYM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="input-checkbox">
+              <label class="checkbox" for="checkbox-3"><input id="checkbox-3" type="checkbox" class="check-box" /></label>
+            </div>
+          </div>
         </div>
+        
       </div>
     </center>
     <footer>
