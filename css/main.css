@@ -1,5 +1,5 @@
 footer {
-  background-color: #000000;
+  background-color: #3a413e;
   height: 5%;
   position: fixed;
   bottom: 0px;
@@ -8,6 +8,12 @@ footer {
   color: #fcf6f6;
   text-align: center;
   width: 100%;
+  color: #E2EFDE;
+  font-family: sans-serif;
+}
+
+footer a, footer a:visited {
+  color: #E2EFDE;
 }
 
 header {
