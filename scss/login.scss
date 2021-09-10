@@ -1,21 +1,26 @@
-$primary_color : #15172b;
-$secondary_color : #C09F80;
-$tertiary_color : #76323F;
-$alt_color : #565656;
+$primary_color : #E2EFDE;
+$alt_color: #AFD0BF;
+$secondary_color : #54635D;
+$teriary_color : #9B7E46;
+$weird_color: #F4B266 ;
+
 $primary_font : Arial, Helvetica, sans-serif;
 body {
     align-items: center;
-    background-color: #D7CEC7;
+    background-color: $primary_color;
     display: flex;
     justify-content: center;
     height: 90vh;
+  }
+  .image1{
+    z-index: -1;
   }
   
   .form {
     background-color: $secondary_color;
     border-radius: 20px;
     box-sizing: border-box;
-    height: 55vh;
+    height: 50;
     padding: 20px;
     width: 60vh;
   }
@@ -24,13 +29,13 @@ body {
     background-color: $secondary_color;
     border-radius: 20px;
     box-sizing: border-box;
-    height: 65vh;
+    height: 50;
     padding: 20px;
     width: 60vh;
   }
 
   .title {
-    color: $primary_color;
+    color: $weird_color;
     text-align: center;
     font-family: $primary_font;
     font-size: 36px;
@@ -39,7 +44,7 @@ body {
   }
   
   .subtitle {
-    color: $primary_color;
+    color: $weird_color;
     text-align: center;
     font-family: $primary_font;
     font-size: 20px;
@@ -63,11 +68,11 @@ body {
   }
   
   .input {
-    background-color: $primary_color;
+    background-color: white;
     border-radius: 12px;
     border: 0;
     box-sizing: border-box;
-    color: #eee;
+    color: $secondary_color;
     font-size: 18px;
     height: 100%;
     outline: 0;
@@ -114,7 +119,7 @@ body {
   }
   
   .placeholder {
-    color: $alt_color;
+    color: $secondary_color;
     font-family: $primary_font;
     left: 20px;
     line-height: 14px;
@@ -144,7 +149,7 @@ body {
     border-radius: 12px;
     border: 0;
     box-sizing: border-box;
-    color: $primary_color;
+    color: $secondary_color;
     cursor: pointer;
     font-size: 18px;
     height: 50px;
@@ -157,4 +162,15 @@ body {
   .submit:active {
     background-color: #06b;
   }
+
+  a:link {
+    color: white;
+  }
   
+  a:visited {
+    color: grey;
+  }
+  
+  a:hover {
+    color: lightblue;
+  }

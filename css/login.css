@@ -2,7 +2,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #D7CEC7;
+  background-color: #E2EFDE;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,28 +12,32 @@ body {
   height: 90vh;
 }
 
+.image1 {
+  z-index: -1;
+}
+
 .form {
-  background-color: #C09F80;
+  background-color: #54635D;
   border-radius: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 55vh;
+  height: 50;
   padding: 20px;
   width: 60vh;
 }
 
 .form2 {
-  background-color: #C09F80;
+  background-color: #54635D;
   border-radius: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 65vh;
+  height: 50;
   padding: 20px;
   width: 60vh;
 }
 
 .title {
-  color: #15172b;
+  color: #F4B266;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 36px;
@@ -42,7 +46,7 @@ body {
 }
 
 .subtitle {
-  color: #15172b;
+  color: #F4B266;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -66,12 +70,12 @@ body {
 }
 
 .input {
-  background-color: #15172b;
+  background-color: white;
   border-radius: 12px;
   border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #eee;
+  color: #54635D;
   font-size: 18px;
   height: 100%;
   outline: 0;
@@ -80,7 +84,7 @@ body {
 }
 
 .cut {
-  background-color: #C09F80;
+  background-color: #54635D;
   border-radius: 10px;
   height: 20px;
   left: 20px;
@@ -100,7 +104,7 @@ body {
 }
 
 .cut-big {
-  background-color: #C09F80;
+  background-color: #54635D;
   border-radius: 10px;
   height: 20px;
   left: 20px;
@@ -128,7 +132,7 @@ body {
 }
 
 .placeholder {
-  color: #565656;
+  color: #54635D;
   font-family: Arial, Helvetica, sans-serif;
   left: 20px;
   line-height: 14px;
@@ -150,21 +154,21 @@ body {
 }
 
 .input:not(:placeholder-shown) ~ .placeholder {
-  color: #15172b;
+  color: #E2EFDE;
 }
 
 .input:focus ~ .placeholder {
-  color: #15172b;
+  color: #E2EFDE;
 }
 
 .button {
-  background-color: #565656;
+  background-color: #AFD0BF;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 12px;
   border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #15172b;
+  color: #54635D;
   cursor: pointer;
   font-size: 18px;
   height: 50px;
@@ -175,5 +179,17 @@ body {
 
 .submit:active {
   background-color: #06b;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: grey;
+}
+
+a:hover {
+  color: lightblue;
 }
 /*# sourceMappingURL=login.css.map */
