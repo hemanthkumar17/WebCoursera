@@ -1,5 +1,5 @@
 footer {
-  background-color: #000000;
+  background-color: #3a413e;
   height: 5%;
   position: fixed;
   bottom: 0px;
@@ -9,7 +9,8 @@ footer {
   text-align: center;
   width: 100%;
   color: #E2EFDE;
-  a{
+  font-family: sans-serif;
+  a, a:visited{
     color: #E2EFDE;
   }
 }
