@@ -8,6 +8,11 @@ footer {
   color: #fcf6f6;
   text-align: center;
   width: 100%;
+  color: #E2EFDE;
+}
+
+footer a {
+  color: #E2EFDE;
 }
 
 header {

@@ -1,0 +1,14 @@
+body {
+  font-family: sans-serif;
+  background-color: #E2EFDE;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 2%;
+  padding-bottom: 5%;
+}
+/*# sourceMappingURL=text_only.css.map */
