@@ -18,17 +18,16 @@
 }
 
 h1 {
-  color: #56615B;
+  color: #56615b;
   font-size: 3rem;
   padding-top: 1%;
 }
 
-/* Helper class for text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -36,18 +35,15 @@ h1 {
   width: 1px;
 }
 
-/* Global styling */
 body {
   font-family: sans-serif;
-  background-color: #E2EFDE;
+  background-color: #e2efde;
 }
 
-/* Style .js- class with pointer cursor */
 .js-nested-link {
   cursor: pointer;
 }
 
-/* Card styling */
 .card {
   background-color: white;
   border: 1px solid #aaaaaa;
@@ -58,8 +54,8 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding-bottom: 20px;
   max-width: 280px;
   margin: 20px;
@@ -71,15 +67,15 @@ body {
 
 .card__image {
   -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
+  -ms-flex-order: -1;
+  order: -1;
   width: 100%;
 }
 
 .card__link {
   display: inline-block;
   text-decoration: none;
-  background-color: #808F87;
+  background-color: #808f87;
   padding: 10px 15px;
   color: white;
   border-radius: 5px;
@@ -88,7 +84,7 @@ body {
 }
 
 .card__link:hover {
-  background-color: #56615B;
+  background-color: #56615b;
 }
 
 .link-courses {
@@ -111,8 +107,8 @@ iframe {
 
 .input-checkbox {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 90px;
 }
 
@@ -145,14 +141,14 @@ input#search-bar:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 5%;
   margin-top: 2%;
 }
@@ -163,32 +159,32 @@ input#search-bar:focus {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 1.5%;
   margin-left: 10%;
 }
 
 select {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   outline: 0;
   border: 0;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding: 0 1em;
-  color: #E2EFDE;
-  background-color: #808F87;
+  color: #e2efde;
+  background-color: #808f87;
   background-image: none;
   cursor: pointer;
 }
@@ -204,22 +200,22 @@ select::-ms-expand {
   display: flex;
   width: 20em;
   height: 3em;
-  border-radius: .25em;
+  border-radius: 0.25em;
   overflow: hidden;
   margin-bottom: 4%;
 }
 
 .select::after {
-  content: '\25BC';
+  content: "\25BC";
   position: absolute;
   top: 0;
   right: 0;
   padding: 1em;
-  background-color: #AFD0BF;
+  background-color: #afd0bf;
   pointer-events: none;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   height: 0;
   width: 0;
   visibility: hidden;
@@ -230,14 +226,14 @@ label {
   text-indent: -9999px;
   width: 80px;
   height: 40px;
-  background: #56615B;
+  background: #56615b;
   display: block;
   border-radius: 40px;
   position: relative;
 }
 
 label:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 2px;
   left: 2px;
@@ -250,16 +246,15 @@ label:after {
 }
 
 input:checked + label {
-  background: #F4B266;
+  background: #f4b266;
 }
 
 input:checked + label:after {
   left: calc(100% - 2px);
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 label:active:after {
   width: 52px;
 }
-/*# sourceMappingURL=course.css.map */

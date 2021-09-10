@@ -26,29 +26,29 @@
         <label for="password" class="placeholder">Password</label>
       </div>
       <button id="submit" type="text" class="button">Log In</button>
-      <button id="signup" type="text" class="button">Not a member? Sign Up!</button>
+      <button id="signup" type="text" class="button">
+        Not a member? Sign Up!
+      </button>
     </div>
     <footer class="footer">
-      <a href="tnc.html">Terms of use</a>
+      <a href="./pages/tnc.html">Terms of use</a>
       |
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="./pages/privacy.html">Privacy Policy</a>
       |
       <a href="https://wa.me/8220710221">Help and Support</a>
-      | 
+      |
       <a href="https://wa.me/8220710221">Contact Us</a>
     </footer>
     <script type="text/javascript">
-      document.getElementById("submit").onclick = function() {
-        password = document.getElementById("password")
-        if(password.value == "1234")
-          location.href = "courseList.html";
-        else
-          alert("Invalid password : For this demo, enter the password 1234");
-          console.log("Invalid password");
+      document.getElementById("submit").onclick = function () {
+        password = document.getElementById("password");
+        if (password.value == "1234") location.href = "courseList.html";
+        else alert("Invalid password : For this demo, enter the password 1234");
+        console.log("Invalid password");
       };
-      document.getElementById("signup").onclick = function() {
-        location.href = "signup.html";
-      }
+      document.getElementById("signup").onclick = function () {
+        location.href = "./pages/signup.html";
+      };
     </script>
   </body>
 </html>

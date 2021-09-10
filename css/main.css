@@ -8,12 +8,13 @@ footer {
   color: #fcf6f6;
   text-align: center;
   width: 100%;
-  color: #E2EFDE;
+  color: #e2efde;
   font-family: sans-serif;
 }
 
-footer a, footer a:visited {
-  color: #E2EFDE;
+footer a,
+footer a:visited {
+  color: #e2efde;
 }
 
 header {
@@ -30,4 +31,3 @@ header {
   text-align: center;
   width: 100%;
 }
-/*# sourceMappingURL=main.css.map */

@@ -11,7 +11,10 @@ function create_card(course) {
   div.style.backgroundSize = "150px";
   div.id = course.toLowerCase();
   div.addEventListener("click", (event) => {
-    window.location.href = window.location.href.replace('courseList',event.target.id);
+    window.location.href = window.location.href.replace(
+      "courseList",
+      "pages/" + event.target.id
+    );
   });
   return div;
 }

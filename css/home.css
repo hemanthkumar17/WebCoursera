@@ -1,6 +1,6 @@
 body {
   padding-top: 75px;
-  background-color: #E2EFDE;
+  background-color: #e2efde;
   font-family: sans-serif;
 }
 
@@ -16,16 +16,16 @@ input#search-bar {
   height: 45px;
   padding: 0 20px;
   font-size: 1rem;
-  background-color: #F3F8F1;
-  border: 1px solid #D0CFCE;
+  background-color: #f3f8f1;
+  border: 1px solid #d0cfce;
   outline: none;
 }
 
 input#search-bar:focus {
-  border: 1px solid #008ABF;
+  border: 1px solid #008abf;
   -webkit-transition: 0.35s ease;
   transition: 0.35s ease;
-  color: #008ABF;
+  color: #008abf;
 }
 
 .container {
@@ -37,11 +37,11 @@ input#search-bar:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0 auto;
   margin-top: -35px;
 }
@@ -57,13 +57,12 @@ input#search-bar:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
   margin: 25px;
   cursor: pointer;
 }
-/*# sourceMappingURL=home.css.map */
