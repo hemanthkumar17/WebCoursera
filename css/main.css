@@ -17,6 +17,10 @@ footer a:visited {
   color: #e2efde;
 }
 
+footer a:hover{
+  color: #AFD0BF;
+}
+
 header {
   background-color: #000000;
   font-size: xxx-large;

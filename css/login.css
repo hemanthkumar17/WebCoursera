@@ -37,7 +37,7 @@ body {
 }
 
 .title {
-  color: #f4b266;
+  color: #FAD9B3;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 36px;
@@ -46,7 +46,7 @@ body {
 }
 
 .subtitle {
-  color: #f4b266;
+  color: #FAD9B3;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -70,7 +70,7 @@ body {
 }
 
 .input {
-  background-color: white;
+  background-color: #e2efde;
   border-radius: 12px;
   border: 0;
   -webkit-box-sizing: border-box;
@@ -162,7 +162,7 @@ body {
 }
 
 .button {
-  background-color: #afd0bf;
+  background-color: #FAD9B3;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 12px;
   border: 0;
@@ -179,16 +179,4 @@ body {
 
 .submit:active {
   background-color: #06b;
-}
-
-a:link {
-  color: white;
-}
-
-a:visited {
-  color: grey;
-}
-
-a:hover {
-  color: lightblue;
 }
