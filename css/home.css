@@ -68,12 +68,11 @@ input#search-bar:focus {
 }
 footer {
   background-color: #3a413e;
-  height: 12vh;
+  height: 5%;
   position: fixed;
-  padding-top: 2vh;
   bottom: 0px;
   left: 0px;
-  line-height: 2.5vh;
+  line-height: 4vh;
   color: #fcf6f6;
   text-align: center;
   width: 100%;
