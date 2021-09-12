@@ -14,16 +14,19 @@ document.body.addEventListener("click", function (e) {
   }
 });
 
-
 /* This will later be extracted from the database*/
 const sizes = {
-  "medium" : ['https://www.youtube.com/embed/pQN-pnXPaVg'],
-  "short" : ['https://www.youtube.com/embed/qz0aGYrrlhU'],
-  "long" : ['https://www.youtube.com/embed/7mdEvKyLoYM'],
-  "all" : ['https://www.youtube.com/embed/qz0aGYrrlhU','https://www.youtube.com/embed/pQN-pnXPaVg','https://www.youtube.com/embed/7mdEvKyLoYM']
-}
+  medium: ["https://www.youtube.com/embed/pQN-pnXPaVg"],
+  short: ["https://www.youtube.com/embed/qz0aGYrrlhU"],
+  long: ["https://www.youtube.com/embed/7mdEvKyLoYM"],
+  all: [
+    "https://www.youtube.com/embed/qz0aGYrrlhU",
+    "https://www.youtube.com/embed/pQN-pnXPaVg",
+    "https://www.youtube.com/embed/7mdEvKyLoYM",
+  ],
+};
 
-function return_inner_html(youtube_link){
+function return_inner_html(youtube_link) {
   return `
     
       <div class="iframe">
@@ -41,18 +44,17 @@ function return_inner_html(youtube_link){
         <label class="checkbox" for="checkbox-1"><input id="checkbox-" type="checkbox" class="check-box" /></label>
       </div>
 
-  `
+  `;
 }
 
-
-document.getElementById('duration').addEventListener("change", (event) => {
-  let parent = document.getElementById('iframes')
-  parent.innerHTML = ''
-  let type = event.target.value
-  sizes[type].forEach(link => {
-    let element = document.createElement('div')
-    element.className = 'iframe-div'
-    element.innerHTML = return_inner_html(link)
-    parent.appendChild(element)
+document.getElementById("duration").addEventListener("change", (event) => {
+  let parent = document.getElementById("iframes");
+  parent.innerHTML = "";
+  let type = event.target.value;
+  sizes[type].forEach((link) => {
+    let element = document.createElement("div");
+    element.className = "iframe-div";
+    element.innerHTML = return_inner_html(link);
+    parent.appendChild(element);
   });
-})
+});

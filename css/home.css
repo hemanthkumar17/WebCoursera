@@ -1,5 +1,5 @@
 body {
-  padding-top: 75px;
+  padding-top: 50px;
   background-color: #e2efde;
   font-family: sans-serif;
 }
@@ -65,4 +65,27 @@ input#search-bar:focus {
   position: relative;
   margin: 25px;
   cursor: pointer;
+}
+footer {
+  background-color: #3a413e;
+  height: 12vh;
+  position: fixed;
+  padding-top: 2vh;
+  bottom: 0px;
+  left: 0px;
+  line-height: 2.5vh;
+  color: #fcf6f6;
+  text-align: center;
+  width: 100%;
+  color: #e2efde;
+  font-family: sans-serif;
+}
+
+footer a,
+footer a:visited {
+  color: #e2efde !important;
+}
+
+footer a:hover {
+  color: #afd0bf !important;
 }
