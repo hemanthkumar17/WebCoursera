@@ -13,22 +13,33 @@
     $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
     if(empty($name)){
-      array_push($errors, "name is required");
+      array_push($errors, "Name is required");
     }
     if(empty($email)){
-      array_push($errors, "email is required");
+      array_push($errors, "Email is required");
     }
     if(empty($password)){
-      array_push($errors, "password is required");
+      array_push($errors, "Password is required");
     }
     if($password != $password_2){
       array_push($errors, "The passwords do not match");
     }
 
+    $sql_e = "SELECT * FROM user_login WHERE email='$email'";
+    $res_e = mysqli_query($db, $sql_e);
+
+    if(mysqli_num_rows($res_e) > 0){
+  	  array_push($errors, "This email ID is already taken");
+    }
+
     if(count($errors)==0){
       $hashed_pass = password_hash($password, PASSWORD_DEFAULT);
-      $sql = "INSERT INTO user_login (email,name,password) values ('$name','$email','$hashed_pass')";
-      mysqli_query($db, $sql);
+      $sql = "INSERT INTO user_login (email,name,password) values ('$email','$name','$hashed_pass')";
+      if(mysqli_query($db, $sql)){
+				header('Location: ../index.html');
+			} else {
+				array_push($errors, mysqli_error($db));
+			}
     }
   }
 ?>
@@ -56,12 +67,12 @@
       <?php if (count($errors)>0): 
         foreach($errors as $error):?>
         <div class="alert alert-danger" role="alert">
-          <?php $error ?>
+          <?php echo $error; ?>
         </div>
         <?php 
           endforeach;
         endif; ?>
-      <div class="input-container ic1">
+      <div class="input-container ic12">
         <input id="emailId" name="emailId" class="input" type="text" placeholder=" " />
         <div class="cut"></div>
         <label for="emailId" class="placeholder">Email Id</label>

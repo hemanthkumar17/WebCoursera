@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2021 at 07:52 AM
+-- Generation Time: Oct 26, 2021 at 09:04 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -38,7 +38,9 @@ CREATE TABLE `user_login` (
 --
 
 INSERT INTO `user_login` (`email`, `name`, `password`) VALUES
-('Emmanuel Marian Mathew', 'emmanuelmarianmat@gmail.com', '$2y$10$7UolOyQH1ZxojwiJKEea0.1xcuqqrzI57ce./zF7ybEXXTOnAsUY.');
+('emmanuelmarianmathew@gmail.com', 'Emmanuel Marian Mathew', '$2y$10$rSsiEx/GmY0ACsRuxuRu5uBxn83WwTFy/M0LTO1GPlzVOQ1bakofO'),
+('omar1024@gmail.com', 'Atar', '$2y$10$1c1Nc1X16vM42oByLWf0WO7MwX0xizAXEo4bruMHxGPF3DaKiz4eO'),
+('stevenssufjan4@gmail.com', 'Emmy', '$2y$10$AiKI7UgXw0PNu0pgOBMvmeiVFck9uMjxQjh8X/i0v6hk9aAIarWka');
 
 --
 -- Indexes for dumped tables

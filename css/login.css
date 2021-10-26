@@ -52,6 +52,7 @@ body {
   font-size: 20px;
   font-weight: 600;
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .input-container {
@@ -62,6 +63,10 @@ body {
 
 .ic1 {
   margin-top: 40px;
+}
+
+.ic12{
+  margin-top: 30px;
 }
 
 .ic2 {
@@ -182,10 +187,11 @@ body {
 }
 
 .alert {
-  padding: 15px;
-  margin-bottom: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
   border: 1px solid transparent;
   border-radius: 4px;
+  font-family: sans-serif;
 }
 
 .alert h4 {
