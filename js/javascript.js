@@ -15,13 +15,13 @@ document.body.addEventListener("click", function (e) {
 });
 
 const sizes = {
-  medium: ["https://www.youtube.com/embed/pQN-pnXPaVg"],
-  short: ["https://www.youtube.com/embed/qz0aGYrrlhU"],
-  long: ["https://www.youtube.com/embed/7mdEvKyLoYM"],
+  medium: ["https://www.youtube.com/embed/PkZNo7MFNFg"],
+  short: ["https://www.youtube.com/embed/W6NZfCO5SIk"],
+  long: ["https://www.youtube.com/embed/Qqx_wzMmFeA"],
   all: [
-    "https://www.youtube.com/embed/qz0aGYrrlhU",
-    "https://www.youtube.com/embed/pQN-pnXPaVg",
-    "https://www.youtube.com/embed/7mdEvKyLoYM",
+    "https://www.youtube.com/embed/W6NZfCO5SIk",
+    "https://www.youtube.com/embed/PkZNo7MFNFg",
+    "https://www.youtube.com/embed/Qqx_wzMmFeA",
   ],
 };
 
