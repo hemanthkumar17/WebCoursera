@@ -19,13 +19,18 @@
     if(count($errors)==0){
       $sql = "SELECT password FROM user_login WHERE email='$email'";
       $result=mysqli_query($db,$sql);
-      $row = mysql_fetch_array($result);
-      $stored_pass = $row['password'];
-     if(password_verify($password, $stored_pass)){
-        header("location : courseList.html");
-     }else {
-        array_push($errors, mysqli_error($db));
-    }
+      if($result){
+        $row = mysqli_fetch_array($result);
+        $stored_pass = $row['password'];
+        if(password_verify($password, $stored_pass)){
+            header("location : courseList.html");
+        }else {
+            array_push($errors, 'Incorrect password');
+        }
+      }
+      else{
+        array_push($errors, 'Email not registered');
+      }
     }
   }
 ?>
@@ -47,17 +52,17 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>  
     <form class="form2" method="post" action="index.php">
-      
       <div class="title">WebCoursera</div>
       <div class="subtitle">Login</div>
-      <?php if (count($errors)>0): 
-        foreach($errors as $error):?>
+      <?php if (count($errors)>0): ?>
         <div class="alert alert-danger" role="alert">
+        <?php foreach($errors as $error):?>
           <?php echo $error; ?>
-        </div>
+          <br/>
         <?php 
-          endforeach;
-        endif; ?>
+          endforeach;?>
+        </div>
+        <?php endif; ?>
       <div class="input-container ic12">
         <input id="emailId" name="emailId" class="input" type="email" placeholder=" " />
         <div class="cut"></div>
