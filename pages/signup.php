@@ -73,33 +73,22 @@
           endforeach;
         endif; ?>
       <div class="input-container ic12">
-        <input id="emailId" name="emailId" class="input" type="text" placeholder=" " />
+        <input id="emailId" name="emailId" class="input" type="email" placeholder=" " />
         <div class="cut"></div>
         <label for="emailId" class="placeholder">Email Id</label>
       </div>
-      <!-- <div class="input-container ic2">
-        <input
-          id="phoneno"
-          class="input"
-          type="tel"
-          pattern="[0-9]{10}"
-          placeholder=" "
-        />
-        <div class="cut-big"></div>
-        <label for="phoneno" class="placeholder">Phone Number</label>
-      </div> -->
       <div class="input-container ic2">
         <input id="name" name="name" class="input" type="text" placeholder=" " />
         <div class="cut"></div>
         <label for="name" class="placeholder">Name</label>
       </div>
       <div class="input-container ic2">
-        <input id="password" name="password" class="input" type="text" placeholder=" " />
+        <input id="password" name="password" class="input" type="password" placeholder=" " />
         <div class="cut"></div>
         <label for="password" class="placeholder">Password</label>
       </div>
       <div class="input-container ic2">
-        <input id="password_2" name="password_2" class="input" type="text" placeholder=" " />
+        <input id="password_2" name="password_2" class="input" type="password" placeholder=" " />
         <div class="cut-big"></div>
         <label for="password" class="placeholder">Confirm Password</label>
       </div>
