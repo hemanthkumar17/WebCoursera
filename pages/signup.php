@@ -42,6 +42,9 @@
 			}
     }
   }
+  elseif(isset($_POST['login'])){
+    header('Location: ../index.html');
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,14 +67,15 @@
       
       <div class="title">WebCoursera</div>
       <div class="subtitle">Sign Up as a Member</div>
-      <?php if (count($errors)>0): 
-        foreach($errors as $error):?>
+      <?php if (count($errors)>0): ?>
         <div class="alert alert-danger" role="alert">
+        <?php foreach($errors as $error):?>
           <?php echo $error; ?>
-        </div>
+          <br/>
         <?php 
-          endforeach;
-        endif; ?>
+          endforeach;?>
+        </div>
+        <?php endif; ?>
       <div class="input-container ic12">
         <input id="emailId" name="emailId" class="input" type="email" placeholder=" " />
         <div class="cut"></div>
@@ -93,6 +97,7 @@
         <label for="password" class="placeholder">Confirm Password</label>
       </div>
       <button name="submit" type="submit" class="button">Sign Up</button>
+      <button name="login" type="submit" class="button">Already a member? Log in!</button>
 </form>
     <!-- <script type="text/javascript">
       document.getElementById("submit").onclick = function () {
