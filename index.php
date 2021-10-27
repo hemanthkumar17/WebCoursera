@@ -1,42 +1,7 @@
 <?php
-
-  $email = '';
-  $password = '';
-  $errors = array();
-  $db = mysqli_connect('localhost','root','','user_info');
-  if(isset($_POST['submit'])){
-    $email = mysqli_real_escape_string($db, $_POST['emailId']);
-    $password = mysqli_real_escape_string($db, $_POST['password']);
-
-
-    if(empty($email)){
-      array_push($errors, "Email is required");
-    }
-    if(empty($password)){
-      array_push($errors, "Password is required");
-    }
-
-    $sql = "SELECT * FROM user_login WHERE email='$email'";
-    $result=mysqli_query($db,$sql);
-    $count = mysqli_num_rows($result);
-    if($count == 0){
-      array_push($errors, "User does not exist");
-    }
-    if(count($errors)==0){
-      // $sql = "SELECT password FROM user_login WHERE email='$email'";
-      // $result=mysqli_query($db,$sql);
-      
-      
-        $row = mysqli_fetch_array($result);
-        $stored_pass = $row['password'];
-        if(password_verify($password, $stored_pass)){
-          header('Location: courseList.html');
-        }else {
-            array_push($errors, 'Incorrect password');
-        }
-    }
-  }
-?>
+include './session.php';
+$errors = $_SESSION['errors'];
+  ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -54,7 +19,7 @@
   <body>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>  
-    <form class="form2" method="post" action="index.php">
+    <form class="form2" method="post" action="./index.php">
       <div class="title">WebCoursera</div>
       <div class="subtitle">Login</div>
       <?php if (count($errors)>0): ?>

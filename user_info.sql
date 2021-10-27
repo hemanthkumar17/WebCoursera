@@ -42,6 +42,7 @@ INSERT INTO `user_login` (`email`, `name`, `password`) VALUES
 ('omar1024@gmail.com', 'Atar', '$2y$10$1c1Nc1X16vM42oByLWf0WO7MwX0xizAXEo4bruMHxGPF3DaKiz4eO'),
 ('stevenssufjan4@gmail.com', 'Emmy', '$2y$10$AiKI7UgXw0PNu0pgOBMvmeiVFck9uMjxQjh8X/i0v6hk9aAIarWka');
 
+INSERT INTO `user_login` (`email`, `name`, `password`) VALUES ('zeusprime17@gmail.com', 'zeusprime', '$2y$10$rBl0AUM7eotbb81.erNfwe3R.HZ6.TBhAkDLp478NGSOMDKxrO5fe');
 --
 -- Indexes for dumped tables
 --
