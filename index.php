@@ -42,7 +42,7 @@ $errors = $_SESSION['errors'];
         <label for="password" class="placeholder">Password</label>
       </div>
       <button name="submit" type="submit" class="button">Log In</button>
-     
+      <button name="submit2" type="submit" class="button">Not a member? Sign up!</button>
     </form>
 
     <!-- <script type="text/javascript">
