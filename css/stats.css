@@ -31,8 +31,29 @@ body{
      font-weight: bold;
 }
 
+.stats-text5 {
+   font-size: 15px;
+   font-weight: normal;
+   margin-top: 15px;
+   margin-bottom: 0;
+   text-align: center;
+     color: #54635d;
+     text-transform: uppercase;
+}
+
 .stats-text2 {
    font-size: 45px;
+   font-weight: normal;
+   margin-top: 15px;
+   margin-bottom: 0;
+   text-align: center;
+     color: #54635d;
+     text-transform: uppercase;
+     font-weight: bold;
+}
+
+.stats-text3 {
+   font-size: 30px;
    font-weight: normal;
    margin-top: 15px;
    margin-bottom: 0;
@@ -55,7 +76,10 @@ body{
    display: table;
    color: #54635d;
 }
-
+ul{
+   list-style-type: none;
+   margin-left: -20px;
+}
 @media (max-width: 992px) {
    .counter {
        margin-bottom: 40px;

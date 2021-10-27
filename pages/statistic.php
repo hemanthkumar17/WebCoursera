@@ -6,29 +6,29 @@
     $css = 'NA';
     $html = 'NA';
     $db = mysqli_connect('localhost','root','','user_info');
-    $result = mysqli_query($db,"SELECT * FROM reg WHERE coursename='ajax'");
-    if($result){
-        $ajax =  mysqli_num_rows($result);
+    $result1 = mysqli_query($db,"SELECT * FROM reg WHERE coursename='ajax'");
+    if($result1){
+        $ajax =  mysqli_num_rows($result1);
     }
-    $result = mysqli_query($db,"SELECT * FROM reg WHERE coursename='css'");
-    if($result){
-        $css =  mysqli_num_rows($result);
+    $result2 = mysqli_query($db,"SELECT * FROM reg WHERE coursename='css'");
+    if($result2){
+        $css =  mysqli_num_rows($result2);
     }
-    $result = mysqli_query($db,"SELECT * FROM reg WHERE coursename='java'");
-    if($result){
-        $java =  mysqli_num_rows($result);
+    $result3 = mysqli_query($db,"SELECT * FROM reg WHERE coursename='java'");
+    if($result3){
+        $java =  mysqli_num_rows($result3);
     }
-    $result = mysqli_query($db,"SELECT * FROM reg WHERE coursename='javascript'");
-    if($result){
-        $javascript =  mysqli_num_rows($result);
+    $result4 = mysqli_query($db,"SELECT * FROM reg WHERE coursename='javascript'");
+    if($result4){
+        $javascript =  mysqli_num_rows($result4);
     }
-    $result = mysqli_query($db,"SELECT * FROM reg WHERE coursename='html'");
-    if($result){
-        $html =  mysqli_num_rows($result);
+    $result5 = mysqli_query($db,"SELECT * FROM reg WHERE coursename='html'");
+    if($result5){
+        $html =  mysqli_num_rows($result5);
     }
-    $result = mysqli_query($db,"SELECT * FROM reg WHERE coursename='python'");
-    if($result){
-        $python =  mysqli_num_rows($result);
+    $result6 = mysqli_query($db,"SELECT * FROM reg WHERE coursename='python'");
+    if($result6){
+        $python =  mysqli_num_rows($result6);
     }
  ?>
 <!DOCTYPE html>
@@ -55,7 +55,7 @@
 <section id="statistic" class="statistic-section one-page-section">
         <h1 class="stats-text2">Stats</h1>
         <div class="container pt-5">
-            <div class="row text-center pb-5 pt-5">
+            <div class="row text-center">
                 <div class="col-xs-12 col-md-4">
                     <div class="counter">
                         <!-- <i class="fa fa-code fa-2x stats-icon"></i> -->
@@ -109,6 +109,136 @@
             </div>
         </div>
     </section>
+    <div class="container">
+        <h1 class="stats-text2 pb-3">Students enrolled</h1>
+
+        <?php
+            if (mysqli_num_rows($result1) > 0) {?>
+            <h2 class="stats-text3">AJAX</h2>
+            <ul class="text-center">
+            <?php
+                while($rowData = mysqli_fetch_array($result1)){
+                ?>
+                <li class="stats-text">
+                <?php
+                    $email = $rowData["email"];
+                    $result = mysqli_fetch_array(mysqli_query($db,"SELECT * FROM user_login WHERE email='$email'"));
+                    echo $result["name"];
+                ?>
+                </li>
+                <?php
+                }
+            ?>
+            </ul>
+            <?php
+            }
+        ?>
+
+<?php
+            if (mysqli_num_rows($result2) > 0) {?>
+            <h2 class="stats-text3">CSS</h2>
+            <ul class="text-center">
+            <?php
+                while($rowData = mysqli_fetch_array($result2)){
+                ?>
+                <li class="stats-text">
+                <?php
+                    $email = $rowData["email"];
+                    $result = mysqli_fetch_array(mysqli_query($db,"SELECT * FROM user_login WHERE email='$email'"));
+                    echo $result["name"];
+                ?>
+                </li>
+                <?php
+                }
+            ?>
+            </ul>
+            <?php
+            }
+        ?><?php
+        if (mysqli_num_rows($result3) > 0) {?>
+        <h2 class="stats-text3">JAVA</h2>
+        <ul class="text-center">
+        <?php
+            while($rowData = mysqli_fetch_array($result3)){
+            ?>
+            <li class="stats-text">
+            <?php
+                echo $rowData["email"].'<br>';
+            ?>
+            </li>
+            <?php
+            }
+        ?>
+        </ul>
+        <?php
+        }
+    ?>
+    <?php
+            if (mysqli_num_rows($result4) > 0) {?>
+            <h2 class="stats-text3">JAVASCRIPT</h2>
+            <ul class="text-center">
+            <?php
+                while($rowData = mysqli_fetch_array($result4)){
+                ?>
+                <li class="stats-text">
+                <?php
+                    $email = $rowData["email"];
+                    $result = mysqli_fetch_array(mysqli_query($db,"SELECT * FROM user_login WHERE email='$email'"));
+                    echo $result["name"];
+                ?>
+                </li>
+                <?php
+                }
+            ?>
+            </ul>
+            <?php
+            }
+        ?>
+        <?php
+            if (mysqli_num_rows($result5) > 0) {?>
+            <h2 class="stats-text3">HTML</h2>
+            <ul class="text-center">
+            <?php
+                while($rowData = mysqli_fetch_array($result5)){
+                ?>
+                <li class="stats-text">
+                <?php
+                    $email = $rowData["email"];
+                    $result = mysqli_fetch_array(mysqli_query($db,"SELECT * FROM user_login WHERE email='$email'"));
+                    echo $result["name"];
+                ?>
+                </li>
+                <?php
+                }
+            ?>
+            </ul>
+            <?php
+            }
+        ?>
+        <?php
+            if (mysqli_num_rows($result6) > 0) {?>
+            <h2 class="stats-text3">PYTHON</h2>
+            <ul class="text-center">
+            <?php
+                while($rowData = mysqli_fetch_array($result6)){
+                ?>
+                <li class="stats-text">
+                <?php
+                    $email = $rowData["email"];
+                    $result = mysqli_fetch_array(mysqli_query($db,"SELECT * FROM user_login WHERE email='$email'"));
+                    echo $result["name"];
+                ?>
+                </li>
+                <?php
+                }
+            ?>
+            </ul>
+            <?php
+            }
+        ?>
+        
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
