@@ -31,6 +31,17 @@ body{
      font-weight: bold;
 }
 
+.stats-text2 {
+   font-size: 45px;
+   font-weight: normal;
+   margin-top: 15px;
+   margin-bottom: 0;
+   text-align: center;
+     color: #54635d;
+     text-transform: uppercase;
+     font-weight: bold;
+}
+
 .stats-line-black {
    margin: 12px auto 0;
    width: 55px;

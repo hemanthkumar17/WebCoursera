@@ -7,7 +7,7 @@ function create_card(course) {
   div.style.backgroundSize = "150px";
   div.id = course.toLowerCase();
   div.addEventListener("click", (event) => {
-    window.location.href = "http://localhost:8080/pages/" + event.target.id + ".php";
+    window.location.href = "pages/" + event.target.id + ".php";
   });
   return div;
 }

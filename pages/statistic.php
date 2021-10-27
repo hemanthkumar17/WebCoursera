@@ -53,6 +53,7 @@
 </head>
 <body>
 <section id="statistic" class="statistic-section one-page-section">
+        <h1 class="stats-text2">Stats</h1>
         <div class="container pt-5">
             <div class="row text-center pb-5 pt-5">
                 <div class="col-xs-12 col-md-4">

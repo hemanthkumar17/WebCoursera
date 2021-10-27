@@ -167,7 +167,7 @@ else {
           </div>
           <div class="card__block">
             <form method="post" action="../courses.php">
-              <?php getbutton()?>"
+              <?php getbutton()?>
             </form>
           </div>
         </div>
