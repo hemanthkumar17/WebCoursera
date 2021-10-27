@@ -36,14 +36,14 @@
       $hashed_pass = password_hash($password, PASSWORD_DEFAULT);
       $sql = "INSERT INTO user_login (email,name,password) values ('$email','$name','$hashed_pass')";
       if(mysqli_query($db, $sql)){
-				header('Location: ../index.html');
+				header('Location: ../index.php');
 			} else {
 				array_push($errors, mysqli_error($db));
 			}
     }
   }
   elseif(isset($_POST['login'])){
-    header('Location: ../index.html');
+    header('Location: ../index.php');
   }
 ?>
 <!DOCTYPE html>
