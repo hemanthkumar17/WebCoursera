@@ -5,7 +5,7 @@
   $password = '';
   $password_2 = '';
   $errors = array();
-  $db = mysqli_connect('localhost','root','','user_info');
+  $db = mysqli_connect('localhost','zeusprime','Hemanth@1711','user_info');
   if(isset($_POST['submit'])){
     $name = mysqli_real_escape_string($db, $_POST['name']);
     $email = mysqli_real_escape_string($db, $_POST['emailId']);
