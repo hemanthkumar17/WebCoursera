@@ -57,3 +57,24 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+--
+-- Dumping data for table `user_login`
+--
+
+CREATE TABLE `courses` (
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `courses` (`name`) VALUES ('ajax'), ('css'), ('html'), ('java'), ('javascript'), ('python');
+
+CREATE TABLE `reg` (
+  `email` varchar(255) NOT NULL,
+  `coursename` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `reg` (`email`, `coursename`) VALUES 
+('zeusprime17@gmail.com', 'ajax'),
+('zeusprime17@gmail.com', 'css'),
+('omar1024@gmail.com', 'python');
