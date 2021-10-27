@@ -3,7 +3,10 @@ session_start();
   $email = '';
   $password = '';
   $errors = array();
-  $db = mysqli_connect('localhost','zeusprime','Hemanth@1711','user_info');
+  $db = mysqli_connect('localhost','root','','user_info');
+  if(isset($_POST['submit2'])){
+    header('Location: pages/signup.php');
+  }
   if(isset($_POST['submit'])){
     $email = mysqli_real_escape_string($db, $_POST['emailId']);
     $password = mysqli_real_escape_string($db, $_POST['password']);
@@ -19,10 +22,10 @@ session_start();
     $_SESSION["email"] = $email;
     $result=mysqli_query($db,$sql);
     $count = mysqli_num_rows($result);
-    if($count == 0){
-        array_push($errors, 'Incorrect password');
-        $_SESSION['errors'] = $errors;
+    if($count == 0 && !empty($email)){
+        // array_push($errors, 'Incorrect password');
         array_push($errors, "User does not exist");
+        
     }
     if(count($errors)==0){
       // $sql = "SELECT password FROM user_login WHERE email='$email'";
@@ -36,8 +39,9 @@ session_start();
         }else {
             array_push($errors, 'Incorrect password');
             $_SESSION['errors'] = $errors;
-            header('Location: index.php');
+            // header('Location: index.php');
         }
     }
   }
+  $_SESSION['errors'] = $errors;
 ?>
