@@ -1,3 +1,24 @@
+<?php
+include '../session.php';
+
+$_SESSION['coursename'] = "ajax";
+$db = mysqli_connect('localhost','zeusprime','Hemanth@1711','user_info');
+$email = mysqli_real_escape_string($db, $_SESSION['email']);
+$coursename = $_SESSION['coursename'];
+$query = "select count(*) from reg where email='$email' and coursename='$coursename';";
+$results = mysqli_query($db, $query);
+$number_of_courses = mysqli_fetch_array($results);
+if ($number_of_courses[0] == 0) {
+    $_SESSION['stringenroll'] = "Enroll the course";
+}
+else {
+    $_SESSION['stringenroll'] = "Complete course";
+}
+    function getbutton(){
+  $string = $_SESSION['stringenroll'];
+  echo "<input type='submit' name='coursename' value='$string' class='card__link' />";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,22 +35,24 @@
   <body>
     <center>
       <div class="course-page">
-        <h1>JAVA</h1>
+        <h1>AJAX</h1>
 
         <h2 class="reference">Reference Material</h2>
         <div class="link-courses">
           <div class="card js-nested-link">
-            <h2 class="card__block">Oracle docs</h2>
+            <h2 class="card__block">MDN Docs</h2>
             <img
               class="card__image"
-              src="https://cdn.icon-icons.com/icons2/2699/PNG/512/java_logo_icon_168609.png"
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a1/AJAX_logo_by_gengns.svg"
             />
             <p class="card__block">
-              Java oracle documentation is considered as official java
-              documentation
+              Morzilla Wev Docs are standard documentation for all web related
+              queries
             </p>
             <div class="card__block">
-              <a href="https://docs.oracle.com/en/java/" class="card__link"
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX"
+                class="card__link"
                 >Read more
               </a>
             </div>
@@ -38,31 +61,33 @@
             <h2 class="card__block">W3 Schools</h2>
             <img
               class="card__image"
-              src="https://cdn.icon-icons.com/icons2/2699/PNG/512/java_logo_icon_168609.png"
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a1/AJAX_logo_by_gengns.svg"
             />
             <p class="card__block">
               W3 Schools documentation is also famous, And is also used by lot
               of developers
             </p>
             <div class="card__block">
-              <a href="https://www.w3schools.com/java/" class="card__link"
+              <a
+                href="https://www.w3schools.com/js/js_ajax_intro.asp"
+                class="card__link"
                 >Read more
               </a>
             </div>
           </div>
           <div class="card js-nested-link">
-            <h2 class="card__block">tutorialspoint</h2>
+            <h2 class="card__block">CMS docs</h2>
             <img
               class="card__image"
-              src="https://cdn.icon-icons.com/icons2/2699/PNG/512/java_logo_icon_168609.png"
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a1/AJAX_logo_by_gengns.svg"
             />
             <p class="card__block">
-              Tutorials Point is similar to w3 schools and popular among
-              developers
+              Winter CMS documentation is one of the famous documentation out
+              there for Ajax
             </p>
             <div class="card__block">
               <a
-                href="https://www.tutorialspoint.com/java/java_documentation.htm"
+                href="https://wintercms.com/docs/ajax/introduction"
                 class="card__link"
                 >Read more
               </a>
@@ -84,7 +109,7 @@
               <iframe
                 width="300"
                 height="200"
-                src="https://www.youtube.com/embed/eIrMbAQSU34"
+                src="https://www.youtube.com/embed/tHRNuBf_8xg"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -105,7 +130,7 @@
                 class="iframe"
                 width="300"
                 height="200"
-                src="https://www.youtube.com/embed/8cm1x4bC610"
+                src="https://www.youtube.com/embed/rJesac0_Ftw"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -127,7 +152,7 @@
                 class="iframe"
                 width="300"
                 height="200"
-                src="https://www.youtube.com/embed/hBh_CC5y8-s"
+                src="https://www.youtube.com/embed/82hnvUYY6QA"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -143,7 +168,9 @@
             </div>
           </div>
           <div class="card__block">
-            <a href="../complete.php" class="card__link">Complete course</a>
+            <form method="post" action="../courses.php">
+              <?php getbutton()?>"
+            </form>
           </div>
         </div>
       </div>
@@ -159,6 +186,6 @@
       |
       <a href="https://wa.me/8220710221">Contact Us</a>
     </footer>
-    <script src="../js/java.js"></script>
+    <script src="../js/ajax.js"></script>
   </body>
 </html>

@@ -4,6 +4,7 @@ session_start();
   $password = '';
   $errors = array();
   $db = mysqli_connect('localhost','zeusprime','Hemanth@1711','user_info');
+  
   if(isset($_POST['submit'])){
     $email = mysqli_real_escape_string($db, $_POST['emailId']);
     $password = mysqli_real_escape_string($db, $_POST['password']);

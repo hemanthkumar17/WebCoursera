@@ -1,3 +1,24 @@
+<?php
+include '../session.php';
+
+$_SESSION['coursename'] = "css";
+$db = mysqli_connect('localhost','zeusprime','Hemanth@1711','user_info');
+$email = mysqli_real_escape_string($db, $_SESSION['email']);
+$coursename = $_SESSION['coursename'];
+$query = "select count(*) from reg where email='$email' and coursename='$coursename';";
+$results = mysqli_query($db, $query);
+$number_of_courses = mysqli_fetch_array($results);
+if ($number_of_courses[0] == 0) {
+    $_SESSION['stringenroll'] = "Enroll the course";
+}
+else {
+    $_SESSION['stringenroll'] = "Complete course";
+}
+    function getbutton(){
+  $string = $_SESSION['stringenroll'];
+  echo "<input type='submit' name='coursename' value='$string' class='card__link' />";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,7 +35,7 @@
   <body>
     <center>
       <div class="course-page">
-        <h1>HTML</h1>
+        <h1>CSS</h1>
 
         <h2 class="reference">Reference Material</h2>
         <div class="link-courses">
@@ -22,7 +43,7 @@
             <h2 class="card__block">MDN Docs</h2>
             <img
               class="card__image"
-              src="https://www.bestwebsitebuilders.uk/wp-content/uploads/2018/06/html-1080x500.png"
+              src="https://armyyazilim.com/wp-content/uploads/2019/10/css.png"
             />
             <p class="card__block">
               Morzilla Wev Docs are standard documentation for all web related
@@ -30,7 +51,7 @@
             </p>
             <div class="card__block">
               <a
-                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference"
                 class="card__link"
                 >Read more
               </a>
@@ -40,30 +61,34 @@
             <h2 class="card__block">W3 Schools</h2>
             <img
               class="card__image"
-              src="https://www.bestwebsitebuilders.uk/wp-content/uploads/2018/06/html-1080x500.png"
+              src="https://armyyazilim.com/wp-content/uploads/2019/10/css.png"
             />
             <p class="card__block">
               W3 Schools documentation is also famous, And is also used by lot
               of developers
             </p>
             <div class="card__block">
-              <a href="https://www.w3schools.com/html/" class="card__link"
+              <a href="https://www.w3docs.com/learn-css.html" class="card__link"
                 >Read more
               </a>
             </div>
           </div>
           <div class="card js-nested-link">
-            <h2 class="card__block">HTML Dot com</h2>
+            <h2 class="card__block">tutorialspoint</h2>
             <img
               class="card__image"
-              src="https://www.bestwebsitebuilders.uk/wp-content/uploads/2018/06/html-1080x500.png"
+              src="https://armyyazilim.com/wp-content/uploads/2019/10/css.png"
             />
             <p class="card__block">
-              HTML Dot com are standard documentation for all web related
-              queries
+              Tutorials Point is similar to w3 schools and popular among
+              developers
             </p>
             <div class="card__block">
-              <a href="https://html.com/" class="card__link">Read more </a>
+              <a
+                href="https://www.tutorialspoint.com/css/index.htm"
+                class="card__link"
+                >Read more
+              </a>
             </div>
           </div>
         </div>
@@ -82,7 +107,7 @@
               <iframe
                 width="300"
                 height="200"
-                src="https://www.youtube.com/embed/qz0aGYrrlhU"
+                src="https://www.youtube.com/embed/1PnVor36_40"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -103,7 +128,7 @@
                 class="iframe"
                 width="300"
                 height="200"
-                src="https://www.youtube.com/embed/pQN-pnXPaVg"
+                src="https://www.youtube.com/embed/KN6oBEOz2ZI"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -125,7 +150,7 @@
                 class="iframe"
                 width="300"
                 height="200"
-                src="https://www.youtube.com/embed/7mdEvKyLoYM"
+                src="https://www.youtube.com/embed/1Rs2ND1ryYc"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -141,7 +166,9 @@
             </div>
           </div>
           <div class="card__block">
-            <a href="../complete.php" class="card__link">Complete course</a>
+            <form method="post" action="../courses.php">
+              <?php getbutton()?>"
+            </form>
           </div>
         </div>
       </div>

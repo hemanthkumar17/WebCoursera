@@ -1,3 +1,24 @@
+<?php
+include '../session.php';
+
+$_SESSION['coursename'] = "python";
+$db = mysqli_connect('localhost','zeusprime','Hemanth@1711','user_info');
+$email = mysqli_real_escape_string($db, $_SESSION['email']);
+$coursename = $_SESSION['coursename'];
+$query = "select count(*) from reg where email='$email' and coursename='$coursename';";
+$results = mysqli_query($db, $query);
+$number_of_courses = mysqli_fetch_array($results);
+if ($number_of_courses[0] == 0) {
+    $_SESSION['stringenroll'] = "Enroll the course";
+}
+else {
+    $_SESSION['stringenroll'] = "Complete course";
+}
+    function getbutton(){
+  $string = $_SESSION['stringenroll'];
+  echo "<input type='submit' name='coursename' value='$string' class='card__link' />";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -143,7 +164,9 @@
             </div>
           </div>
           <div class="card__block">
-            <a href="../complete.php" class="card__link">Complete course</a>
+            <form method="post" action="../courses.php">
+              <?php getbutton()?>"
+            </form>
           </div>
         </div>
       </div>
