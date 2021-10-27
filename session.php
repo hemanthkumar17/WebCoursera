@@ -3,7 +3,7 @@ session_start();
   $email = '';
   $password = '';
   $errors = array();
-  $db = mysqli_connect('localhost','root','','user_info');
+  $db = mysqli_connect('localhost','zeusprime','Hemanth@1711','user_info');
   if(isset($_POST['submit2'])){
     header('Location: pages/signup.php');
   }

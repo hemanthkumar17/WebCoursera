@@ -5,7 +5,7 @@
     $python = 'NA';
     $css = 'NA';
     $html = 'NA';
-    $db = mysqli_connect('localhost','root','','user_info');
+    $db = mysqli_connect('localhost','zeusprime','Hemanth@1711','user_info');
     $result = mysqli_query($db,"SELECT * FROM reg WHERE coursename='ajax'");
     if($result){
         $ajax =  mysqli_num_rows($result);
