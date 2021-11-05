@@ -192,3 +192,10 @@ input:checked + label:after {
 label:active:after {
   width: 52px;
 }
+
+.homeimg {
+  z-index: 2;
+  float: left;
+  height: 75px;
+  width: 75px;
+}

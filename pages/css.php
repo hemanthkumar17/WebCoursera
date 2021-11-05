@@ -35,6 +35,7 @@ else {
   <body>
     <center>
       <div class="course-page">
+        <input type="image" class="homeimg" src="../src/icon.png" name="home" onclick="document.location.href='../courseList.html'" />
         <h1>CSS</h1>
 
         <h2 class="reference">Reference Material</h2>
